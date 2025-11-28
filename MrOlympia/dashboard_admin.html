@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Painel Admin</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-dark">
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="brand"><div class="logo-icon">🏆</div></a>
+    <nav class="nav">
+      <a href="inscritos.html">Ver Inscritos</a>
+      <a href="PHP/logout.php">Sair</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container pagina-admin">
+  <h2>Painel Administrativo</h2>
+  <table class="tabela-atletas">
+    <thead><tr><th>ID</th><th>Nome</th><th>Email</th><th>Sexo</th><th>Altura</th><th>Peso</th><th>Categoria</th><th>Data</th></tr></thead>
+    <tbody id="listaAdmin"></tbody>
+  </table>
+</main>
+
+<script>
+fetch("PHP/get_usuarios.php")
+.then(r => r.text())
+.then(html => {
+    document.getElementById("listaAdmin").innerHTML = html;
+});
+</script>
+</body>
+</html>

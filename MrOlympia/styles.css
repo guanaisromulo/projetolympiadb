@@ -1,0 +1,261 @@
+/* Fonts: Oswald (tÃ­tulos) Montserrat (texto) */
+:root{
+  --bg:#070707;
+  --panel:#0f0f10;
+  --muted:#cfcfcf;
+  --accent-red:#b71c1c;
+  --accent-gold:#d4af37;
+  --white:#ffffff;
+  --glass: rgba(255,255,255,0.03);
+  --card-shadow: 0 8px 30px rgba(0,0,0,0.6);
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;font-family: 'Montserrat', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; background: linear-gradient(180deg,var(--bg),#0a0a0a); color:var(--muted); -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;}
+
+.container{max-width:1100px;margin:0 auto;padding:20px}
+
+/* Header */
+.site-header{background:linear-gradient(90deg,rgba(0,0,0,0.6), rgba(20,0,0,0.2)); border-bottom:1px solid rgba(255,255,255,0.03); position:sticky; top:0; z-index:50}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:12px 20px}
+.brand{display:flex;gap:12px;align-items:center;text-decoration:none;color:var(--white)}
+.logo-icon{font-size:28px; background:linear-gradient(90deg,var(--accent-gold),#fff3a0); width:56px;height:56px;border-radius:8px;display:flex;align-items:center;justify-content:center; color:#1a1a1a}
+.brand-title{display:block;font-weight:700;font-family:'Oswald',sans-serif;color:var(--white); font-size:20px}
+.brand-sub{font-size:11px;color:var(--muted)}
+
+/* Nav */
+.nav{display:flex;gap:12px;align-items:center}
+.nav-link{color:var(--muted); text-decoration:none; padding:8px 10px; border-radius:6px; font-weight:600}
+.nav-link.btn-outline{border:1px solid rgba(255,255,255,0.06); padding:8px 12px}
+.nav-link:hover{color:var(--white)}
+
+/* Hero */
+.hero{padding:48px 0}
+.hero-grid{display:grid;grid-template-columns:1fr 420px;gap:30px;align-items:center}
+.hero-left h1{font-family:'Oswald',sans-serif;color:var(--white); font-size:44px;margin:0 0 12px}
+.lead{font-size:18px;color:var(--muted);margin-bottom:18px}
+.cta-row{display:flex;gap:12px;margin-bottom:20px}
+.btn{display:inline-block;padding:10px 18px;border-radius:8px;text-decoration:none;font-weight:700;cursor:pointer;border:none}
+.btn-red{background:linear-gradient(180deg,var(--accent-red),#800); color:var(--white)}
+.btn-gold{background:linear-gradient(180deg,var(--accent-gold),#b8922a); color:#111}
+.btn-ghost{background:transparent;border:1px solid rgba(255,255,255,0.06); color:var(--muted)}
+.btn-outline{border:1px solid rgba(255,255,255,0.08); background:transparent; color:var(--white)}
+
+/* features */
+.features{margin-top:10px;list-style:none;padding:0;display:flex;gap:14px;color:var(--muted);flex-wrap:wrap}
+.features li{background:var(--glass);padding:8px 12px;border-radius:8px;font-size:14px}
+
+/* right preview card */
+.card-preview{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.2)); padding:18px;border-radius:12px;box-shadow:var(--card-shadow)}
+.athlete-card{display:flex;gap:12px;align-items:center;margin-top:12px}
+.athlete-photo{width:120px;height:120px;border-radius:8px;background:linear-gradient(135deg,#111,#222);border:4px solid rgba(255,255,255,0.03)}
+.athlete-info{font-size:14px;color:var(--muted)}
+
+/* How section */
+.how{padding:36px 0}
+.how h2{color:var(--white);font-family:'Oswald',sans-serif}
+.steps{display:flex;gap:12px;margin-top:16px}
+.step{background:var(--panel);padding:18px;border-radius:10px;flex:1;box-shadow:var(--card-shadow)}
+.step-num{width:36px;height:36px;border-radius:8px;background:var(--accent-red);color:#fff;display:inline-flex;align-items:center;justify-content:center;font-weight:700;margin-bottom:10px}
+.step h4{color:var(--white);margin:6px 0}
+
+/* Auth / forms */
+.auth-page{display:flex;justify-content:center;padding:44px 0}
+.auth-card, .inscricao-card{width:100%;max-width:760px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.2)); padding:22px;border-radius:12px;box-shadow:var(--card-shadow); color:var(--muted)}
+.auth-card h2, .inscricao-card h2{font-family:'Oswald',sans-serif;color:var(--white);margin-top:0}
+.auth-card label, .inscricao-card label{display:block;margin-top:12px;font-weight:600;font-size:13px;color:var(--muted)}
+.auth-card input, .inscricao-card input, .inscricao-card select, .auth-card select, .auth-card textarea {width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:var(--white);margin-top:6px}
+.form-row{display:flex;gap:12px;align-items:center;margin-top:16px}
+.muted{color:#bfbfbf;font-size:13px}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.grid-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}
+.rules-box{margin-top:10px;padding:12px;border-left:4px solid var(--accent-gold);background:rgba(212,175,55,0.04);color:var(--white);border-radius:8px}
+
+/* Footer */
+.site-footer{border-top:1px solid rgba(255,255,255,0.03);padding:16px 0;margin-top:30px}
+.footer-inner{display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-size:13px}
+
+/* Responsividade */
+@media(max-width:900px){
+  .hero-grid{grid-template-columns:1fr; text-align:center}
+  .hero-right{order:2}
+  .hero-left{order:1}
+  .grid-3{grid-template-columns:1fr}
+  .steps{flex-direction:column}
+  .nav{gap:8px}
+}
+
+option  {
+  background-color: #111;        /* fundo preto */
+  color: #fff;                   /* texto branco */
+  border: 2px solid #b30000;     /* borda vermelha */
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 8px;
+  outline: none;
+  width: 100%;
+  cursor: pointer;
+}
+
+/* --- LAYOUT GERAL --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif; /* Usando a fonte importada */
+}
+
+/* Fundo escuro definido no <body> */
+.bg-dark {
+    background-color: #121212;
+    color: #f0f0f0;
+    min-height: 100vh;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px; /* Largura máxima do conteúdo */
+    margin: 0 auto; /* Centraliza o conteúdo */
+    padding: 0 20px;
+}
+
+/* --- CABEÇALHO --- */
+.site-header {
+    background-color: #1e1e1e;
+    border-bottom: 3px solid #e50914; /* Linha de destaque vermelha */
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand {
+    text-decoration: none;
+    color: #f0f0f0;
+    display: flex;
+    align-items: center;
+}
+
+.logo-icon {
+    font-size: 2em;
+    margin-right: 10px;
+}
+
+.brand-text {
+    line-height: 1;
+}
+
+.brand-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.5em;
+    font-weight: 700;
+    color: #e50914; /* Título vermelho */
+}
+
+.brand-sub {
+    font-size: 0.7em;
+    display: block;
+    color: #ccc;
+    font-weight: 400;
+}
+
+.nav a {
+    color: #f0f0f0;
+    text-decoration: none;
+    margin-left: 20px;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+    font-weight: 600;
+}
+
+.nav a:hover, .nav .btn-outline {
+    color: #e50914;
+    border: 1px solid #e50914;
+    background-color: transparent;
+}
+
+/* --- RODAPÉ --- */
+.site-footer {
+    background-color: #1e1e1e;
+    padding: 20px 0;
+    border-top: 1px solid #333;
+    font-size: 0.8em;
+}
+
+.footer-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #999;
+}
+
+/* --- SEÇÃO DE LISTAGEM DE INSCRITOS --- */
+.list-section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    min-height: 80vh; 
+}
+
+.list-section h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2em;
+    margin-bottom: 25px;
+    color: #f0f0f0;
+    text-align: center;
+}
+
+.table-responsive {
+    overflow-x: auto; 
+    margin-top: 20px;
+    border: 1px solid #333;
+    border-radius: 6px;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse; 
+    color: #f0f0f0; 
+}
+
+/* Cabeçalho da Tabela */
+.data-table thead th {
+    background-color: #2a2a2a; 
+    color: #e50914; 
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    padding: 15px 12px;
+    text-align: left;
+    border-bottom: 2px solid #e50914;
+}
+
+/* Linhas do Corpo da Tabela */
+.data-table tbody tr {
+    background-color: #1e1e1e; 
+    transition: background-color 0.2s;
+}
+
+.data-table tbody tr:hover {
+    background-color: #252525; 
+}
+
+.data-table th,
+.data-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #333; 
+    font-size: 0.95em;
+}
+
+/* Coluna ID */
+.data-table td:first-child {
+    font-weight: bold;
+    color: #aaa;
+    width: 50px;
+}

@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mr. Olympia - Competição Oficial</title>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;600;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-dark">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <div class="logo-icon">🏆</div>
+        <div class="brand-text">
+          <span class="brand-title">Mr. Olympia</span>
+          <small class="brand-sub">Pro Bodybuilding Championship</small>
+        </div>
+      </a>
+
+      <nav class="nav">
+    <a href="index.html" class="nav-link">Home</a>
+    <a href="inscricao.html" class="nav-link btn-outline">Inscrição</a>
+    <a href="login.html" class="nav-link">Entrar</a>
+<a href="inscritos.php" class="nav-link">Ver Inscritos</a>
+</nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-left">
+          <h1>Bem-vindo ao Mr. Olympia</h1>
+          <p class="lead">Inscreva-se, crie seu perfil e participe da maior competição de fisiculturismo.</p>
+          <div class="cta-row">
+            <a href="inscricao.html" class="btn btn-red">Inscreva-se agora</a>
+            <a href="login.html" class="btn btn-gold">Entrar</a>
+          </div>
+          <ul class="features">
+            <li>Perfis individuais para atletas</li>
+            <li>Categorias oficiais (amador/pro)</li>
+            <li>Regras e medidas por categoria (em breve)</li>
+          </ul>
+        </div>
+        <div class="hero-right">
+            <h3>Atleta em destaque</h3>
+            <div class="athlete-card">
+              <div class="athlete-info">
+                <strong>Nome: </strong> João<br>
+                <strong>Categoria: </strong> Classic Physique<br>
+                <strong>Peso: </strong> 90 kg
+              </div>
+            </div>
+            <small class="caption">UM FISICULTURISTA NATO</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="how container">
+      <h2>Como funciona</h2>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <h4>Crie seu perfil</h4>
+          <p>Cadastre-se com seus dados e crie senha segura.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <h4>Escolha a categoria</h4>
+          <p>Selecione a categoria adequada ao seu biotipo.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <h4>Finalize inscrição</h4>
+          <p>Envie documentos e confirme pagamento (back-end).</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> Mr. Olympia — Todos os direitos reservados.</div>
+      <div class="footer-right">
+        <small>Design: tema escuro • Cores: preto • vermelho • dourado</small>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

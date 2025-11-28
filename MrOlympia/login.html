@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Acesso - Mr. Olympia</title>
+<link rel="stylesheet" href="styles.css"> 
+</head>
+<body class="bg-dark">
+  <main class="container auth-page">
+    <section class="auth-card">
+      <h2>Acesso de Atleta/Admin</h2>
+      
+      <form id="formLogin" action="PHP/login.php" method="POST">
+        
+        <label for="email">E-mail</label>
+        <input id="email" name="email" type="email" required>
+        
+        <label for="senha">Senha</label>
+        <input id="senha" name="senha" type="password" required>
+        
+        <div class="form-row">
+            <button type="submit" class="btn btn-red">Entrar</button>
+        </div>
+        
+        <p style="text-align: center; margin-top: 20px;">
+            Ainda não tem conta? <a href="inscricao.html" style="color: #e50914; text-decoration: none;">Inscreva-se aqui</a>
+        </p>
+      </form>
+      
+    </section>
+  </main>
+
+<script src="script.js"></script>
+</body>
+</html>

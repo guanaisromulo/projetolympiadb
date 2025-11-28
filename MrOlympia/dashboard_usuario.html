@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Painel do Usuário</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-dark">
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="brand"><div class="logo-icon">🏆</div></a>
+    <nav class="nav"><a href="PHP/logout.php">Sair</a></nav>
+  </div>
+</header>
+
+<main class="container auth-page">
+  <section class="auth-card">
+    <h2 id="bemvindo">Bem-vindo</h2>
+    <div id="meusDados"></div>
+    <div id="estatisticas"></div>
+  </section>
+</main>
+
+<script>
+fetch("PHP/get_usuario_info.php")
+.then(r => r.json())
+.then(d => {
+    if (d.erro) { window.location.href = 'login.html'; return; }
+    document.getElementById('bemvindo').innerText = 'Bem-vindo, ' + d.nome;
+    document.getElementById('meusDados').innerHTML = `
+        <p>Email: ${d.email}</p>
+        <p>Altura: ${d.altura} cm</p>
+        <p>Peso: ${d.peso} kg</p>
+        <p>Categoria: ${d.categoria}</p>
+    `;
+    document.getElementById('estatisticas').innerHTML = `
+        <p>Total de inscritos: ${d.total}</p>
+        <p>Homens: ${d.homens}</p>
+        <p>Mulheres: ${d.mulheres}</p>
+    `;
+});
+</script>
+</body>
+</html>
